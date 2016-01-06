@@ -1,8 +1,8 @@
-name: TotalFreedomMod
+name: iGetOP
 main: me.StevenLawson.TotalFreedomMod.TotalFreedomMod
-version: 4.3
+version: 2.0
 description: Plugin for the Total Freedom server.
 softdepend: [BukkitTelnet, WorldEdit, Essentials]
-authors: [Madgeek1450, Prozza]
+authors: [Madgeek1450, Prozza, xYuchi]
 
 # plugin.yml is no longer used to define commands.
