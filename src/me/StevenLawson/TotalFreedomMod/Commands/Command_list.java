@@ -12,13 +12,14 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.ALL, source = SourceType.BOTH)
-@CommandParameters(description = "Lists the real names of all online players.", usage = "/<command> [-a | -i]", aliases = "who")
+@CommandParameters(description = "Lists the real names of all online players.", usage = "/<command> [-a | -i | -o]", aliases = "who")
 public class Command_list extends TFM_Command
 {
     private static enum ListFilter
     {
         ALL,
         ADMINS,
+        OWNERS,
         IMPOSTORS;
     }
 
@@ -52,6 +53,10 @@ public class Command_list extends TFM_Command
             {
                 listFilter = ListFilter.IMPOSTORS;
             }
+            else if ("-o".equals(args[0]))
+            {
+                listFilter = ListFilter.OWNERS;
+            }
             else
             {
                 return false;
@@ -67,7 +72,7 @@ public class Command_list extends TFM_Command
 
         onlineStats.append(ChatColor.BLUE).append("There are ").append(ChatColor.RED).append(server.getOnlinePlayers().size());
         onlineStats.append(ChatColor.BLUE).append(" out of a maximum ").append(ChatColor.RED).append(server.getMaxPlayers());
-        onlineStats.append(ChatColor.BLUE).append(" players online.");
+        onlineStats.append(ChatColor.BLUE).append(" pugs online.");
 
         final List<String> names = new ArrayList<String>();
         for (Player player : server.getOnlinePlayers())
@@ -78,6 +83,10 @@ public class Command_list extends TFM_Command
             }
 
             if (listFilter == ListFilter.IMPOSTORS && !TFM_AdminList.isAdminImpostor(player))
+            {
+                continue;
+            }
+            if (listFilter == ListFilter.OWNERS && !TFM_AdminList.isSuperAdmin(player))
             {
                 continue;
             }
