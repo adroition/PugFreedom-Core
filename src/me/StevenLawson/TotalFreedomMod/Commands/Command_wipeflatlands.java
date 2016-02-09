@@ -6,7 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.ONLY_CONSOLE, blockHostConsole = false)
+@CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH, blockHostConsole = false)
 @CommandParameters(description = "Wipe the flatlands map. Requires manual restart after command is used.", usage = "/<command>")
 public class Command_wipeflatlands extends TFM_Command
 {
