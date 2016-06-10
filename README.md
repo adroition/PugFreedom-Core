@@ -1,5 +1,8 @@
 # Core #
 Core is a TotalFreedomMod variant that is meant to simply be for a certain server that is unfinished and unreleased.
+Core is currently developed by rovertdude, currently looking for more developers.
+If you wish to be a developer, please contact rovertdude.
+The best way is through his Skype, which is imbackherobrine.
 
 About the TotalFreedomMod:
 # TotalFreedomMod #
