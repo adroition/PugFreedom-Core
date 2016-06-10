@@ -54,6 +54,16 @@ public class RankManager extends FreedomService
         {
             return Title.DEVELOPER;
         }
+        // If the player's a manager, display that
+        if (ConfigEntry.SERVER_MANAGERS.getList().contains(player.getName()))
+        {
+            return Title.MANAGER;
+        }
+        // If the player's a co-owner, display that as well
+        if (ConfigEntry.SERVER_COOWNERSS.getList().contains(player.getName()))
+        {
+            return Title.COOWNER;
+        }
 
         final Rank rank = getRank(player);
 
