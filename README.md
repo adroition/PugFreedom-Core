@@ -1,3 +1,7 @@
+# Core #
+Core is a TotalFreedomMod variant that is meant to simply be for a certain server that is unfinished and unreleased.
+
+About the TotalFreedomMod:
 # TotalFreedomMod #
 
 TotalFreedomMod is a CraftBukkit server plugin designed primarily to support the [Official TotalFreedom Minecraft Server](http://totalfreedom.me/). However, you are more than welcome to adapt the source for your own server.
