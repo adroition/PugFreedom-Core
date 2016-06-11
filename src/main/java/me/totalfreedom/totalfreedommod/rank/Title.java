@@ -7,8 +7,8 @@ public enum Title implements Displayable
 {
 
     DEVELOPER("a", "Developer", ChatColor.DARK_PURPLE, "Dev"),
-    MANAGER("a", "Manager", ChatColor.RED, "MAN"),
-    COOWNER("the", "Co-Owner", ChatColor.BLUE, "COOWNER"),
+    MANAGER("a", "Manager", ChatColor.AQUA, "Manager"),
+    COOWNER("the", "Co-Owner", ChatColor.BLUE, "Co-Owner"),
     OWNER("the", "Owner", ChatColor.BLUE, "Owner");
 
     private final String determiner;
