@@ -6,13 +6,13 @@
 # Generic server information
 server:
   # You should change this to your server's name
-  name: Undefined
+  name: Total-Core
 
   # The address your server is located at. Please do not include the port.
   address: undefined.undefined.undefined
 
   # Shown at the server list
-  motd: Undefined &8- Minecraft %mcversion%
+  motd: TotalCore &8- Minecraft %mcversion%
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
@@ -217,6 +217,9 @@ flatlands:
 # Admin-Only Mode
 admin_only_mode: false
 
+# Senior-Only Mode - in beta
+senior_only_mode: false
+
 # Protected Areas - Protect areas so that only superadmins can directly modify blocks in those areas. WorldEdit and other such plugins might bypass this.
 protectarea:
   enabled: true
@@ -237,11 +240,10 @@ announcer:
   interval: 600
 
   # Prefix for all announcements
-  prefix: '&5[&eundefined&5] &b'
+  prefix: '&5[&cTotal-Core&5] &b'
 
   announcements:
     - 'Be sure to visit our forums at &6http://totalcore.boards.net'
-    - 'You can always review the server rules here: &6http://totalfreedom.me/'
     - 'If you are not OP, be sure to ask!'
     - 'Somebody breaking the rules? Report it! /report <user> <reason>'
     - 'Griefing is not allowed!'
