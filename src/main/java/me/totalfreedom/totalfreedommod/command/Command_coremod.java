@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.NON_OP, source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about the Core or reloads it", usage = "/<command> [reload]")
-public class Command_totalfreedommod extends FreedomCommand
+public class Command_coremod extends FreedomCommand
 {
 
     @Override
