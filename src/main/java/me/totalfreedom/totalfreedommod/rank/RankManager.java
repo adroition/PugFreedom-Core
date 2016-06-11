@@ -60,7 +60,7 @@ public class RankManager extends FreedomService
             return Title.MANAGER;
         }
         // If the player's a co-owner, display that as well
-        if (ConfigEntry.SERVER_COOWNERSS.getList().contains(player.getName()))
+        if (ConfigEntry.SERVER_COOWNERS.getList().contains(player.getName()))
         {
             return Title.COOWNER;
         }
