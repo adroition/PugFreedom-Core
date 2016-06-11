@@ -22,14 +22,14 @@ public class Command_adminmode extends FreedomCommand
 
         if (args[0].equalsIgnoreCase("off"))
         {
-            ConfigEntry.ADMIN_ONLY_MODE.setBoolean(false);
+            ConfigEntry.SENIOR_ONLY_MODE.setBoolean(false);
             FUtil.adminAction(sender.getName(), "Opening the server to all players.", true);
             return true;
         }
         else if (args[0].equalsIgnoreCase("on"))
         {
-            ConfigEntry.ADMIN_ONLY_MODE.setBoolean(true);
-            FUtil.adminAction(sender.getName(), "Closing the server to non-superadmins.", true);
+            ConfigEntry.SENIOR_ONLY_MODE.setBoolean(true);
+            FUtil.adminAction(sender.getName(), "Closing the server to non-senioradmins.", true);
             for (Player player : server.getOnlinePlayers())
             {
                 checkRank(!Rank.TELNET_ADMIN);
