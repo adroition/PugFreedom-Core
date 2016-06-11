@@ -48,22 +48,13 @@ public class Command_coremod extends FreedomCommand
         msg("Core, original makers on TotalFreedom, the original all-op server.", ChatColor.GOLD);
         msg("Running on " + ConfigEntry.SERVER_NAME.getString() + ".", ChatColor.GOLD);
         msg("Created by Madgeek1450 and Prozza, modified by rovertdude.", ChatColor.GOLD);
-        msg(String.format("Version "
-                + ChatColor.BLUE + "%s %s.%s " + ChatColor.GOLD + "("
-                + ChatColor.BLUE + "%s" + ChatColor.GOLD + ")",
-                build.codename,
-                build.version,
-                build.number,
-                build.head), ChatColor.GOLD);
-        msg(String.format("Compiled "
-                + ChatColor.BLUE + "%s" + ChatColor.GOLD + " by "
-                + ChatColor.BLUE + "%s",
-                build.date,
-                build.author), ChatColor.GOLD);
         msg("Visit " + ChatColor.AQUA + "http://github.com/TotalFreedom/TotalFreedomMod"
                 + ChatColor.GREEN + " for the original TotalFreedomMod", ChatColor.GREEN);
         msg("Visit " + ChatColor.AQUA + "http://github.com/TotalCore/Core"
                 + ChatColor.GREEN + " for the Core.", ChatColor.GREEN);
+        msg("The Core is currently version 1.1", ChatColor.GOLD);
+        msg("Compiled by rovertdude.", ChatColor.GOLD);
+        msg("Codename: Child.", ChatColor.GOLD);
 
         return true;
     }
