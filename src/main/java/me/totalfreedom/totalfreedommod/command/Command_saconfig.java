@@ -56,6 +56,21 @@ public class Command_saconfig extends FreedomCommand
                 return true;
             }
 
+            case "stop":
+             FUtil.bcastMsg("Server is going offline!", ChatColor.LIGHT_PURPLE);
+
+             for (Player player : server.getOnlinePlayers())
+             {
+                player.kickPlayer("Server is going offline, come back in about 20 seconds.");
+             }
+
+             server.shutdown();
+             return true;
+             
+            case "mute":
+            FUtil.adminAction(sender.getName(), "Muting " + player.getName(), true);
+            playerdata.setMuted(true);
+
             case "setrank":
             {
                 checkConsole();
