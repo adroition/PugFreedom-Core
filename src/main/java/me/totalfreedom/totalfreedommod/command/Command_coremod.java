@@ -9,8 +9,9 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+# Importing changes
 
-@CommandPermissions(level = Rank.NON_OP, source = SourceType.BOTH)
+@CommandPermissions(level = Rank.OP, source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about the Core or reloads it", usage = "/<command> [reload]")
 public class Command_coremod extends FreedomCommand
 {
@@ -50,7 +51,7 @@ public class Command_coremod extends FreedomCommand
         msg("Created by Madgeek1450 and Prozza, modified by rovertdude.", ChatColor.GOLD);
         msg("Visit " + ChatColor.AQUA + "http://github.com/TotalFreedom/TotalFreedomMod"
                 + ChatColor.GREEN + " for the original TotalFreedomMod", ChatColor.GREEN);
-        msg("Visit " + ChatColor.AQUA + "http://github.com/TotalCore/Core"
+        msg("or visit " + ChatColor.AQUA + "http://github.com/TotalCore/Core"
                 + ChatColor.GREEN + " for the Core.", ChatColor.GREEN);
         msg("The Core is currently version 1.1", ChatColor.GOLD);
         msg("Compiled by rovertdude.", ChatColor.GOLD);
