@@ -101,6 +101,39 @@ public class Command_saconfig extends FreedomCommand
                 msg("Set " + admin.getName() + "'s rank to " + rank.getName());
                 return true;
             }
+            
+            case "debug":
+            {
+                checkNotHostConsole();
+                checkRank(Rank.SENIOR_ADMIN);
+
+                if (args.length < 3)
+                {
+                    return false;
+                }
+
+                Rank rank = Rank.findRank(args[2]);
+                if (rank == null)
+                {
+                    msg("Unknown rank: " + rank);
+                    return true;
+                }
+
+                Admin admin = plugin.al.getEntryByName(args[1]);
+                if (admin == null)
+                {
+                    msg("Unknown admin: " + args[1]);
+                    return true;
+                }
+
+                FUtil.adminAction(sender.getName(), "Debugged " + admin.getName() + "'s rank to " + rank.getName(), true);
+
+                admin.setRank(rank);
+                plugin.al.save();
+
+                msg("Debugged " + admin.getName() + "'s rank to " + rank.getName());
+                return true;
+            }
 
             case "info":
             {
