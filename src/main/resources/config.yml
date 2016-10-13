@@ -127,6 +127,7 @@ blocked_commands:
   - 's:b:/socialspy:_'
   - 's:b:/replaceitem:_'
   - 's:b:/kill:_'
+  - 's:b:/toggle:_'
   - 's:b://generate:_'
   - 's:b://:_'
   - 's:b:/superpickaxe:_'
