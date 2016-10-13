@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.SENIOR_ADMIN, source = SourceType.BOTH)
-@CommandParameters(description = "For developers only - debug things via reflection.", usage = "/<command>", aliases = "ascii")
+@CommandParameters(description = "For developers only - debug things via reflection. /ascii alias.", usage = "/<command>", aliases = "ascii")
 public class Command_debug extends FreedomCommand
 {
 
