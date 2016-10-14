@@ -10,11 +10,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-/*
- * See https://github.com/TotalFreedom/License - This file may not be edited or removed.
- */
 @CommandPermissions(level = Rank.NON_OP, source = SourceType.BOTH)
-@CommandParameters(description = "Shows information about TotalFreedomMod or reloads it", usage = "/<command> [reload]", aliases = "tfm")
+@CommandParameters(description = "Shows information about DevelopFreedomMod or reloads it", usage = "/<command> [reload]", aliases = "dfm")
 public class Command_totalfreedommod extends FreedomCommand
 {
 
