@@ -55,6 +55,12 @@ public class RankManager extends FreedomService
             return Title.DEVELOPER;
         }
 
+        // Show up with DevelopfreedomMod devs up the 
+        if (FUtil.DFMDEVELOPERS.contains(player.getName()))
+        {
+            return Title.DFM_DEV;
+        }
+
         final Rank rank = getRank(player);
 
         // Non-admins don't have titles, display actual rank
@@ -67,6 +73,12 @@ public class RankManager extends FreedomService
         if (ConfigEntry.SERVER_OWNERS.getList().contains(player.getName()))
         {
             return Title.OWNER;
+        }
+        
+        // If the player's a founder, display that
+        if (ConfigEntry.SERVER_FOUNDERS.getList().contains(player.getName()))
+        {
+            return Title.FOUNDER;
         }
 
         return rank;
@@ -81,6 +93,12 @@ public class RankManager extends FreedomService
 
         // CONSOLE?
         if (sender.getName().equals("CONSOLE"))
+        {
+            return ConfigEntry.ADMINLIST_CONSOLE_IS_SENIOR.getBoolean() ? Rank.SENIOR_CONSOLE : Rank.TELNET_CONSOLE;
+        }
+        
+        // If Core is rank, mark as senior 
+        if (sender.getName().equals("CORE"))
         {
             return ConfigEntry.ADMINLIST_CONSOLE_IS_SENIOR.getBoolean() ? Rank.SENIOR_CONSOLE : Rank.TELNET_CONSOLE;
         }
