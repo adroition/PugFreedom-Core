@@ -22,6 +22,10 @@ server:
   owners:
     - undefined
 
+  # All players who show up as a founder
+  founder:
+    - rovertpug
+
   # URL players should appeal for bans at
   ban_url: undefined
 
@@ -36,6 +40,7 @@ adminlist:
 
   # Give the default CONSOLE senior admin privileges.
   # Handy in development environments.
+  # Keep in mind this makes CORE a senior as well
   console_is_senior: true
 
 # ForceIP configuration
