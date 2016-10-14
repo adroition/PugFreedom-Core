@@ -18,7 +18,7 @@ public class Command_tag extends FreedomCommand
 
     public static final List<String> FORBIDDEN_WORDS = Arrays.asList(new String[]
     {
-        "admin", "owner", "moderator", "developer", "console"
+        "admin", "owner", "moderator", "developer", "console", "server", "0wner", "dev", "sra", "sta", "sa", "own3r", "0wn3r"
     });
 
     @Override
