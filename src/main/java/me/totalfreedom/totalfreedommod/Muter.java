@@ -18,7 +18,7 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 public class Muter extends FreedomService
 {
 
-    public static final List<String> MUTE_COMMANDS = Arrays.asList(StringUtils.split("say,me,msg,tell,reply,mail", ","));
+    public static final List<String> MUTE_COMMANDS = Arrays.asList(StringUtils.split("say,me,msg,tell,reply,mail,m,emsg,eme,ov,overlord,etell,pm", ","));
 
     public Muter(TotalFreedomMod plugin)
     {
