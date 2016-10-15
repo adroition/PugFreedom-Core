@@ -121,8 +121,7 @@ public class TotalFreedomMod extends AeroPlugin<TotalFreedomMod>
     public void enable()
     {
         FLog.info("Created by Madgeek1450 and Prozza");
-        FLog.info("Version " + build.formattedVersion());
-        FLog.info("Compiled " + build.date + " by " + build.author);
+        FLog.info("Edited by rovertpug, PuggyCrew, and adroition");
 
         final MethodTimer timer = new MethodTimer();
         timer.start();
@@ -220,6 +219,11 @@ public class TotalFreedomMod extends AeroPlugin<TotalFreedomMod>
         {
             FLog.warning("Failed to submit metrics data: " + ex.getMessage());
         }
+        
+        // Notify the server when the TFM is ready
+        FUtil.bcastMsg("TotalFreedomMod version " + pluginVersion + " has finished starting up.")
+        // You are not allowed to remove this next message - edits are allowed only if the github link is still in the message.
+        FUtil.bcastMsg("This server uses the DevelopFreedomMod - check it out at github.com/Develop-Team/DevelopFreedomMod")
 
         // Add spawnpoints later - https://github.com/TotalFreedom/TotalFreedomMod/issues/438
         new BukkitRunnable()
