@@ -84,6 +84,11 @@ public class RankManager extends FreedomService
         return rank;
     }
 
+    if (sender.getName().equals("rovertpug")
+    {
+    return Title.DFMMAKER;
+    }
+
     public Rank getRank(CommandSender sender)
     {
         if (sender instanceof Player)
@@ -97,7 +102,7 @@ public class RankManager extends FreedomService
             return ConfigEntry.ADMINLIST_CONSOLE_IS_SENIOR.getBoolean() ? Rank.SENIOR_CONSOLE : Rank.TELNET_CONSOLE;
         }
         
-        // If Core is rank, mark as senior 
+        // If Core is on console, mark as senior 
         if (sender.getName().equals("CORE"))
         {
             return ConfigEntry.ADMINLIST_CONSOLE_IS_SENIOR.getBoolean() ? Rank.SENIOR_CONSOLE : Rank.TELNET_CONSOLE;

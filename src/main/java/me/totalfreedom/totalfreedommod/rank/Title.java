@@ -9,6 +9,7 @@ public enum Title implements Displayable
     DEVELOPER("a", "TotalFreedom Developer", ChatColor.DARK_PURPLE, "Dev"),
     DFM_DEV("a", "Developer", ChatColor.DARK_PURPLE, "Dev"),
     FOUNDER("the", "Founder", ChatColor.RED, "Founder"),
+    DFMMAKER("the", "DFM Creator", ChatColor.RED, "DFM Maker"),
     OWNER("the", "Owner", ChatColor.BLUE, "Owner");
 
     private final String determiner;
