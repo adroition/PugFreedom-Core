@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-@CommandPermissions(level = Rank.SENIOR_ADMIN, source = SourceType.ONLY_CONSOLE, blockHostConsole = true)
+@CommandPermissions(level = Rank.SENIOR_ADMIN, source = SourceType.BOTH, blockHostConsole = true)
 @CommandParameters(description = "For the bad admins", usage = "/<command> <playername>")
 public class Command_doom extends FreedomCommand
 {
@@ -35,6 +35,7 @@ public class Command_doom extends FreedomCommand
 
         FUtil.adminAction(sender.getName(), "Casting oblivion over " + player.getName(), true);
         FUtil.bcastMsg(player.getName() + " will be completely obliviated!", ChatColor.RED);
+        FUtil.bcastMsg("DevelopFreedomMod - Obviliating " + player.getName());
 
         final String ip = player.getAddress().getAddress().getHostAddress().trim();
 
@@ -43,7 +44,10 @@ public class Command_doom extends FreedomCommand
         if (admin != null)
         {
             FUtil.adminAction(sender.getName(), "Removing " + player.getName() + " from the superadmin list", true);
-            plugin.al.removeAdmin(admin);
+            admin.setActive(false);
+            plugin.al.save();
+            plugin.al.updateTables();
+            return true;
         }
 
         // Remove from whitelist
@@ -54,7 +58,7 @@ public class Command_doom extends FreedomCommand
 
         // Ban player
         Ban ban = Ban.forPlayer(player, sender);
-        ban.setReason("&cFUCKOFF");
+        ban.setReason("&cFUCKOFF, and get your SHIT together!");
         for (String playerIp : plugin.pl.getData(player).getIps())
         {
             ban.addIp(playerIp);
